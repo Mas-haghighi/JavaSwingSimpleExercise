@@ -10,7 +10,7 @@ Create a GUI form where the user enters their name into a text field and clicks 
 Define the input, button, and label components.
 
 ```java
-public class GreetingFormApp extends JFrame implements ActionListener {
+public class main.GreetingFormApp extends JFrame implements ActionListener {
     private JTextField nameField;   // Field for user input
     private JButton greetButton;    // Button to trigger greeting
     private JLabel messageLabel;    // Label to display greeting
@@ -23,7 +23,7 @@ public class GreetingFormApp extends JFrame implements ActionListener {
 Initialize components and arrange them using a simple layout.
 
 ```java
-public GreetingFormApp() {
+public main.GreetingFormApp() {
     setTitle("Greeting Form");
     nameField = new JTextField(15);
     greetButton = new JButton("Greet");
@@ -65,6 +65,8 @@ public void actionPerformed(ActionEvent e) {
 Start the form on the Event Dispatch Thread.
 
 ```java
+import main.GreetingFormApp;
+
 public static void main(String[] args) {
     SwingUtilities.invokeLater(() -> new GreetingFormApp().setVisible(true));
 }
